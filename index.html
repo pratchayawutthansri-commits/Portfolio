@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio - แสดงผลงานและทักษะของฉัน">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Portfolio<span class="dot">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas class="hero-particles" id="heroParticles"></canvas>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container hero-content">
+            <p class="hero-greeting">Hello, I am</p>
+            <h1 class="hero-name">Pratchayawut Thansri (Fluke)</h1>
+            <h2 class="hero-title">Computer Engineering Student</h2>
+            <p class="hero-description">
+                นักศึกษาวิศวกรรมคอมพิวเตอร์ ที่สนใจการพัฒนาเว็บไซต์สร้างสรรค์ผลงานที่มีคุณภาพ
+                และการพัฒนาระบบให้มีความเสถียรและปลอดภัย
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">ดูผลงาน</a>
+                <a href="#contact" class="btn btn-outline">ติดต่อผม</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">เกี่ยวกับตัวผม</p>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="S__76390403.jpg" alt="Pratchayawut Thansri" class="about-photo" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h3>นักศึกษาวิศวกรรมคอมพิวเตอร์</h3>
+                    <p>
+                        สวัสดีครับ!
+                        กระผมเป็นนักศึกษาชั้นปีที่ 3 สาขาวิศวกรรมคอมพิวเตอร์
+                        กำลังมองหาโอกาสในตำแหน่ง Software Developer / Full Stack Developer
+                        เพื่อพัฒนาทักษะด้านการเขียนโปรแกรม การออกแบบระบบ และการพัฒนาแอปพลิเคชัน
+                        โดยมีความสนใจในการประยุกต์ใช้ AI เพื่อเพิ่มประสิทธิภาพ
+                    </p>
+                    <p>
+                        ผมมีความมุ่งมั่นที่จะพัฒนาตัวเองอยู่เสมอ
+                        และพร้อมที่จะเรียนรู้สิ่งใหม่ๆ อยู่ตลอดเวลา
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label">🎓 การศึกษา</span>
+                            <span class="info-value">มหาวิทยาลัยสยาม คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">📍 ที่อยู่</span>
+                            <span class="info-value">111/153 ซอย หมู่บ้านพีเอสวิลล่า, แขวงหนองแขม, เขตหนองแขม,
+                                กรุงเทพมหานคร</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">📧 อีเมล</span>
+                            <span class="info-value">pratchayawutthansri@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-subtitle">ทักษะของผม</p>
+        </div>
+        <div class="skills-marquee">
+            <div class="skills-track">
+                <div class="skill-card" data-tech="html"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"
+                        class="skill-logo"><span>HTML</span></div>
+                <div class="skill-card" data-tech="css"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
+                        class="skill-logo"><span>CSS</span></div>
+                <div class="skill-card" data-tech="js"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JavaScript" class="skill-logo"><span>JavaScript</span></div>
+                <div class="skill-card" data-tech="ts"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                        alt="TypeScript" class="skill-logo"><span>TypeScript</span></div>
+                <div class="skill-card" data-tech="python"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                        class="skill-logo"><span>Python</span></div>
+                <div class="skill-card" data-tech="mysql"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+                        class="skill-logo"><span>MySQL</span></div>
+                <div class="skill-card" data-tech="php"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
+                        class="skill-logo"><span>PHP</span></div>
+                <div class="skill-card" data-tech="nodejs"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                        alt="Node.js" class="skill-logo"><span>Node.js</span></div>
+                <div class="skill-card" data-tech="git"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                        class="skill-logo"><span>Git</span></div>
+                <!-- Duplicate for seamless loop -->
+                <div class="skill-card" data-tech="html"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"
+                        class="skill-logo"><span>HTML</span></div>
+                <div class="skill-card" data-tech="css"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
+                        class="skill-logo"><span>CSS</span></div>
+                <div class="skill-card" data-tech="js"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JavaScript" class="skill-logo"><span>JavaScript</span></div>
+                <div class="skill-card" data-tech="ts"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                        alt="TypeScript" class="skill-logo"><span>TypeScript</span></div>
+                <div class="skill-card" data-tech="python"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                        class="skill-logo"><span>Python</span></div>
+                <div class="skill-card" data-tech="mysql"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+                        class="skill-logo"><span>MySQL</span></div>
+                <div class="skill-card" data-tech="php"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
+                        class="skill-logo"><span>PHP</span></div>
+                <div class="skill-card" data-tech="nodejs"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                        alt="Node.js" class="skill-logo"><span>Node.js</span></div>
+                <div class="skill-card" data-tech="git"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                        class="skill-logo"><span>Git</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">ผลงานของผม</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <a href="https://youtu.be/NPnqTFFeI0o?si=JcSQxMzSDu-IbjYy" target="_blank" rel="noopener"
+                        class="project-image">
+                        <img src="https://img.youtube.com/vi/NPnqTFFeI0o/maxresdefault.jpg"
+                            alt="Xivex – Fashion E-commerce Platform" class="project-thumbnail" loading="lazy"
+                            width="600" height="338">
+                        <div class="project-play-btn">▶</div>
+                    </a>
+                    <div class="project-info">
+                        <h3>Xivex – Fashion E-commerce Platform</h3>
+                        <p>เว็บแอปพลิเคชันอีคอมเมิร์ซสำหรับธุรกิจเสื้อผ้า Streetwear พร้อมระบบตะกร้าสินค้า, ชำระเงิน,
+                            อัปเดตสถานะออเดอร์แบบเรียลไทม์ (AJAX), Dashboard สำหรับแอดมิน และ Responsive Design</p>
+                        <div class="project-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML/CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://youtu.be/NPnqTFFeI0o?si=JcSQxMzSDu-IbjYy" target="_blank" rel="noopener"
+                                class="project-link">🎬 ดูคลิปนำเสนอ</a>
+                            <a href="https://github.com/pratchayawutthansri-commits" target="_blank" rel="noopener"
+                                class="project-link">📁 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/pratchayawutthansri-commits/-my-system-dormitory" target="_blank"
+                        rel="noopener" class="project-image">
+                        <img src="Screenshot 2026-02-25 172510.png" alt="ระบบจัดการการจองหอพัก"
+                            class="project-thumbnail" loading="lazy" width="600" height="338">
+                    </a>
+                    <div class="project-info">
+                        <h3>ระบบจัดการการจองหอพัก</h3>
+                        <p>ระบบจัดการหอพักครบวงจร ตั้งแต่จองห้องพัก, เช็คบิล, แจ้งซ่อม ไปจนถึงจัดการข้อมูลผู้เช่า ออกแบบ
+                            System Architecture และ Database Design ด้วยตัวเอง</p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">HTML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/pratchayawutthansri-commits/-my-system-dormitory"
+                                target="_blank" rel="noopener" class="project-link">📁 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/pratchayawutthansri-commits/Valentine-s-Day" target="_blank"
+                        rel="noopener" class="project-image">
+                        <img src="Screenshot 2026-02-25 172950.jpg" alt="Valentine's Day Card Randomizer"
+                            class="project-thumbnail" loading="lazy" width="600" height="338">
+                    </a>
+                    <div class="project-info">
+                        <h3>Valentine's Day Card Randomizer 💌</h3>
+                        <p>เว็บแอปสุ่มการ์ดวันวาเลนไทน์แบบอินเทอร์แอคทีฟ ดีไซน์โทนพาสเทล พร้อมแอนิเมชันพื้นหลัง รองรับ
+                            Responsive Layout ทำงานฝั่ง Client-side ทั้งหมด</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://valentine-s-day-s33a.onrender.com/" target="_blank" rel="noopener"
+                                class="project-link">🔗 Live Demo</a>
+                            <a href="https://github.com/pratchayawutthansri-commits/Valentine-s-Day" target="_blank"
+                                rel="noopener" class="project-link">📁 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section section-alt" id="certificates">
+        <div class="container">
+            <h2 class="section-title">Certificates</h2>
+            <p class="section-subtitle">ใบประกาศนียบัตรของผม</p>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="Certificate-BMD1007s-TH_page-0001.jpg" alt="Certificate BMD1007s"
+                            class="certificate-thumbnail" loading="lazy" width="400" height="300">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Certificate BMD1007s</h3>
+                        <p>ใบประกาศนียบัตรสำเร็จหลักสูตร</p>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="Certificate-BMD1012s-TH_page-0001.jpg" alt="Certificate BMD1012s"
+                            class="certificate-thumbnail" loading="lazy" width="400" height="300">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Certificate BMD1012s</h3>
+                        <p>ใบประกาศนียบัตรสำเร็จหลักสูตร</p>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="Certificate-MKD1002s-TH_page-0001.jpg" alt="Certificate MKD1002s"
+                            class="certificate-thumbnail" loading="lazy" width="400" height="300">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Certificate MKD1002s</h3>
+                        <p>ใบประกาศนียบัตรสำเร็จหลักสูตร</p>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="image.png" alt="UX/UI Design Principles" class="certificate-thumbnail" loading="lazy"
+                            width="400" height="300">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>UX/UI Design Principles</h3>
+                        <p>ใบประกาศนียบัตรความรู้พื้นฐานด้านการออกแบบประสบการณ์ผู้ใช้</p>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="image copy.png" alt="Web Development Foundations" class="certificate-thumbnail"
+                            loading="lazy" width="400" height="300">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Web Development Foundations</h3>
+                        <p>ใบประกาศนียบัตรทักษะพื้นฐานในการพัฒนาเว็บไซต์</p>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="image copy 2.png" alt="Data Structures & Algorithms" class="certificate-thumbnail"
+                            loading="lazy" width="400" height="300">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Data Structures & Algorithms</h3>
+                        <p>ใบประกาศนียบัตรความเข้าใจด้านโครงสร้างข้อมูลและอัลกอริทึม</p>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="S__75489287.jpg" alt="TESA Top Gun Rally 2025" class="certificate-thumbnail"
+                            loading="lazy" width="400" height="300">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>TESA Top Gun Rally 2025</h3>
+                        <p>การแข่งขัน TESA Top Gun Rally 2025 Theme "Defense Innovations"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">ติดต่อผม</p>
+            <div class="contact-header">
+                <h3>มาพูดคุยกันเถอะ!</h3>
+                <p>หากคุณสนใจร่วมงาน หรือมีคำถามอะไร สามารถติดต่อผมได้ตามช่องทางด้านล่างครับ</p>
+            </div>
+            <div class="contact-cards">
+                <a href="mailto:pratchayawutthansri@gmail.com" class="contact-card">
+                    <span class="contact-icon">📧</span>
+                    <strong>Email</strong>
+                    <span class="contact-text">pratchayawutthansri@gmail.com</span>
+                </a>
+                <a href="tel:064-338-3495" class="contact-card">
+                    <span class="contact-icon">📱</span>
+                    <strong>Phone</strong>
+                    <span class="contact-text">064-338-3495</span>
+                </a>
+                <div class="contact-card">
+                    <span class="contact-icon">📍</span>
+                    <strong>Location</strong>
+                    <span class="contact-text">ประเทศไทย</span>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/pratchayawutthansri-commits" target="_blank" rel="noopener"
+                    class="social-link" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@flukexd9115/featured" target="_blank" rel="noopener"
+                    class="social-link" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/pratchayawut.thansri.2024" target="_blank" rel="noopener"
+                    class="social-link" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <img src="" alt="Certificate" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        /* ── Navbar scroll effect ── */
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        /* ── Mobile menu toggle ── */
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        /* ── Close mobile menu on link click ── */
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        /* ── Smooth scroll ── */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        /* ── Active nav link on scroll ── */
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        /* ── Scroll reveal animation ── */
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .about-grid, .contact-cards, .certificate-card').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+
+        /* ── Hero Particles Simulation ── */
+        const canvas = document.getElementById('heroParticles');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function initParticles() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            const particleCount = Math.min(Math.floor(window.innerWidth / 10), 100);
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    size: Math.random() * 2 + 1
+                });
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'rgba(0, 212, 255, 0.2)';
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        window.addEventListener('resize', initParticles);
+        initParticles();
+        animateParticles();
+
+        /* ── Cursor Glow Tracking ── */
+        const cursorGlow = document.getElementById('cursorGlow');
+        document.addEventListener('mousemove', (e) => {
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top = e.clientY + 'px';
+            if (!cursorGlow.classList.contains('active')) {
+                cursorGlow.classList.add('active');
+            }
+        });
+        document.addEventListener('mouseleave', () => {
+            cursorGlow.classList.remove('active');
+        });
+
+        /* ── Certificate Lightbox ── */
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+
+        document.querySelectorAll('.certificate-thumbnail').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        /* ── Back to Top ── */
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+</body>
+
+</html>
